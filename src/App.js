@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react'
 
-function App() {
+const App = () => {
+  const [value, setValue] = useState('')
+
+  useEffect(() => {
+    console.log('component did update');
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      React app
+      <input
+        type="text"
+        name="name"
+        id="name"
+        onChange={e => setValue(e.target.value)}
+        placeholder="Bir seyler yazin"
+      />
+      <br />
+      Input value:
+      { value }
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
