@@ -6,7 +6,8 @@ const Counter = ()=>{
     const [calculation, setCalculation] = useState(1);
 
     useEffect(()=>{
-        setCalculation(()=> count*2);
+        // setCalculation(()=> count*2);
+        console.log('useEffect her seferinde çalışır');
     }, [count]);
 
     return (
