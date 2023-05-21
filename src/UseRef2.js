@@ -1,14 +1,14 @@
-import {useRef} from 'react';
+import { useRef } from 'react';
 
-const UseRef2 = ()=>{
+const UseRef2 = () => {
     const inputElement = useRef();
 
-    const focusInput = ()=>{
+    const focusInput = () => {
         inputElement.current.focus();
     }
-    return(
+    return (
         <>
-            <input type='text' ref={inputElement}></input>
+            <input type='text' ref={inputElement} ></input>
             <button onClick={focusInput}>Focus Input</button>
         </>
     )

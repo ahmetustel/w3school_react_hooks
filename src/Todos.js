@@ -1,7 +1,5 @@
 import { useReducer } from 'react'
 
-
-
     const initialTodos = [
         { id: 1, title: 'Todo1', complete: false },
         { id: 2, title: 'Todo2', complete: false }
